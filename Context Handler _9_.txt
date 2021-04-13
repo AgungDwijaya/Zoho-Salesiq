@@ -1,0 +1,23 @@
+response = Map();
+response.put("action","context");
+response.put("context_id",context_id);
+if(context_id.equals("browsing"))
+{
+	browsing = answers.get("browsing").get("text");
+	if(browsing.equalsIgnoreCase("Thanks"))
+	{
+		response.put("action","end");
+		response.put("replies",{"Have a great day"});
+	}
+	// 		else
+}
+else if(context_id.equals("add"))
+{
+	email = answers.get("email").get("text");
+	name = answers.get("name").get("text");
+	info email;
+	info name;
+	response.put("action","end");
+	response.put("replies",{"Our chat representative will contact you soon!"});
+}
+return response;
