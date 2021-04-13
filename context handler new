@@ -1,0 +1,31 @@
+response = Map();
+response.put("action","context");
+response.put("context_id",context_id);
+//info context_id;
+if(context_id.equals("browsing"))
+{
+	browsing = answers.get("browsing").get("text");
+	if(browsing.equalsIgnoreCase("Thanks") || browsing.equalsIgnoreCase("Our agent will contacted you soon!"))
+	{
+		response.put("action","end");
+		response.put("replies",{"Have a great day"});
+	}
+	else if(browsing.equalsIgnoreCase("Want to navigate to another category?"))
+	{
+		// 		question = {"name":"browsing","replies":{{"text":"Hello there! Need some help? Start by selecting a category below to read through helpful support articles in our Help Centre"}},"suggestions":{"IonOpticks Products","FAQ","Quotes, Orders, and Payment","Shipping and Customs","Instrument Compatibility","Storage, Installation, and Operation","Recommendations ","Example Data","Performance Examples","Troubleshooting","Can't find what I'm looking for"}};
+		// 		response.put("questions",{question});
+		response.put("action","reply");
+		response.put("replies",{{"text":"Hello there! Need some help? Start by selecting a category below to read through helpful support articles in our Help Centre"}});
+		response.put("suggestions",{"IonOpticks Products","FAQ","Quotes, Orders, and Payment","Shipping and Customs","Instrument Compatibility","Storage, Installation, and Operation","Recommendations ","Example Data","Performance Examples","Troubleshooting","Can't find what I'm looking for"});
+	}
+// 	else if(context_id.equals("detail"))
+// 	{
+// 		browsing = answers.get("detail").get("text");
+// 		if(browsing.equalsIgnoreCase("Thanks") || browsing.equalsIgnoreCase("Our agent will contacted you soon!"))
+// 		{
+// 			response.put("action","end");
+// 			response.put("replies",{"Have a great day"});
+// 		}
+// 	}
+}
+return response;
