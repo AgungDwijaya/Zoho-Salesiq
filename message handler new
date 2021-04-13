@@ -1,0 +1,112 @@
+response = Map();
+msg = message.get("text");
+if(operation.equals("chat"))
+{
+	if(!msg.equalsIgnoreCase("IonOpticks Products") && !msg.equalsIgnoreCase("FAQ") && !msg.equalsIgnoreCase("Quotes, Orders, and Payment") && !msg.equalsIgnoreCase("Shipping and Customs") && !msg.equalsIgnoreCase("Instrument Compatibility") && !msg.equalsIgnoreCase("Storage, Installation, and Operation") && !msg.equalsIgnoreCase("Recommendations") && !msg.equalsIgnoreCase("Example Data") && !msg.equalsIgnoreCase("Performance Examples") && !msg.equalsIgnoreCase("Troubleshooting") && !msg.equalsIgnoreCase("Can't find what I'm looking for") && !msg.equalsIgnoreCase("Storage, Installation, and Operation"))
+	{
+		response.put("action","reply");
+		response.put("replies",{{"text":"Hello there! Need some help? Start by selecting a category below to read through helpful support articles in our Help Centre"}});
+		response.put("suggestions",{"IonOpticks Products","FAQ","Quotes, Orders, and Payment","Shipping and Customs","Instrument Compatibility","Storage, Installation, and Operation","Recommendations ","Example Data","Performance Examples","Troubleshooting","Can't find what I'm looking for"});
+		// 		response = Map();
+		// 		response.put("action","context");
+		// 		response.put("context_id","help");
+		// 		//response.put("replies",{"Hello there!Looking for anything specific?"});
+		// 		name = {"name":"browsing","replies":{{"text":"Hi, Please enter your name to submit a ticket!","field_name":"siq_name"}},"input":{"type":"name","placeholder":"Enter your name","value":"","error":{"Enter a valid name"}}};
+		// 		email = {"name":"browsing","replies":{{"text":"Hi, Please enter your email to submit a ticket!","field_name":"siq_email"}},"input":{"type":"name","placeholder":"Enter your email","value":"","error":{"Enter a valid email"}}};
+		// 		response.put("questions",{name,email});
+		// 		return response;
+	}
+}
+//Start Message//
+if(msg.equalsIgnoreCase("IonOpticks Products"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/column-options","text":"Aurora Series Column with nanoZero®","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/product-features","text":"Aurora Series Column Features","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/aurora-column-options-product-specifications","text":"Aurora Series Column Specifications","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/aurora-uhplc-emitter-column-with-nanozero-captive-spray-insert-csi","text":"Aurora Series Column with nanoZero® & Captive Spray Insert (CSI)","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/aurora-series-column-lifetime-expectancy","text":"Which column is best for my lab?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/required-accessory-if-using-a-thermo-nanospray-flex-ion-source","text":"Required accessories for Thermo Nanospray Flex source","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/required-accessory-if-using-a-bruker-captivespray-ion-source","text":"Required accessories for Bruker CaptiveSpray source","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/what-additional-fittings-and-adapters-do-i-need","text":"What additional fittings and adapters do I need?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/do-you-offer-columns-in-a-50cm-format","text":"Do you offer columns in a 50cm format?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/do-you-make-custom-columns-to-spec","text":"Do you make custom columns to spec?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/can-i-use-aurora-columns-with-a-trapping-column","text":"Can I use Aurora Series columns with a trapping column?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/what-options-do-you-offer-regarding-packing-materials","text":"What options do you offer regarding packing materials?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/do-you-sell-the-packing-material-in-bulk-for-self-packing","text":"Do you sell the packing material in bulk for self-packing?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/performance-guarantee","text":"What if there is a fault with my column?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/are-your-columns-rohs-compliant","text":"Are your products RoHS compliant?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("FAQ"))
+{
+	response.put("action","context");
+	response.put("context_id","help");
+	question = {"name":"help","replies":{"Welcome back! What do you need help with?"},"suggestions":{"Questions about the product","Sales Enquiry","Can't find what I'm looking for"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Quotes, Orders, and Payment"))
+{
+	response.put("action","context");
+	response.put("context_id","demo");
+	question = {"name":"time","replies":{"Great! Let’s set up a personalized demo to help you manage social media for all your clients. When would you like to schedule it?"},"input":{"type":"calendar"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Shipping and Customs"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/column-options","text":"Aurora Series Column with nanoZero®","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Instrument Compatibility"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/aurora-series-column-and-uhplc-compatibility","text":"Aurora Series Column and UHPLC Compatibility","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/aurora-series-column-and-mass-spectrometer-compatibility","text":"Aurora Series Column and Mass Spectrometer Compatibility","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/sonation","text":"Sonation Column Oven PRSO-V1/PRSO-V2 and Bruker Column Toaster","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Storage, Installation, and Operation"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/storage-of-aurora-series-columns","text":"Storage of Aurora Series Columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/setup-of-uhplc-systems","text":"Installation, Step 1: Setup of UHPLC systems","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/fitting-the-column-to-your-uhplc-system-if-using-bruker-captivespray-source","text":"Installation, Step 2: Fitting the column to your UHPLC system","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/installation-of-aurora-series-columns-for-bruker-captivespray-source","text":"Installation, Step 3a: Connecting Bruker CaptiveSpray Source with Bruker Column Toaster","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/operation-of-aurora-series-columns-recommended-flow-rate","text":"Expected Back Pressure, 5cm Aurora Series Column","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/expected-back-pressure-15cm-aurora-series-column","text":"Expected Back Pressure, 15cm Aurora Series Column","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/expected-back-pressure-25cm-aurora-series-column","text":"Expected Back Pressure, 25cm Aurora Series Column","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Recommendations"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/operation-of-aurora-series-columns-example-gradients","text":"Example Gradients for Aurora Series Columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/flow-rate","text":"Recommendation for Aurora Series Columns - Flow Rate","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/voltage","text":"Recommendation for Aurora Series Columns - Voltage","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/column-ovens","text":"Recommendation for Aurora Series Columns - Temperature","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/operation-of-aurora-series-columns-recommended-flow-rate","text":"Expected Back Pressure, 5cm Aurora Series Column","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/expected-back-pressure-15cm-aurora-series-column","text":"Expected Back Pressure, 15cm Aurora Series Column","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/expected-back-pressure-25cm-aurora-series-column","text":"Expected Back Pressure, 25cm Aurora Series Column","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Example Data"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/comparison-of-bpc-for-25cm-15cm-and-5cm-aurora-series-columns-for-hela-tryptic-digest","text":"Typical results for Hela Tryptic Digest with 25cm, 15cm, and 5cm Aurora Series columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/bpc-stable-retention-time-between-aurora-series-columns","text":"BPC: Stable retention time between Aurora Series columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/tic-stable-retention-time-across-multiple-runs-from-an-aurora-series-columns","text":"TIC: Stable retention time across multiple runs from an Aurora Series column","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Performance Examples"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/performance-comparison-between-aurora-series-columns-and-competitors","text":"Performance comparison between Aurora Series columns and competitors","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/phosphopeptide-identifications-using-aurora-series-columns","text":"Phosphopeptide identifications using Aurora Series columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/peptide-and-protein-identifications-using-aurora-series-columns","text":"Peptide and protein identifications using Aurora Series columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/peak-widths-using-aurora-series-columns","text":"Peak widths using Aurora Series columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/consistent-peak-widths-across-multiple-samples-using-aurora-series-columns","text":"Consistent peak widths across multiple samples using Aurora Series columns","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/how-do-aurora-columns-perform-with-phosphoproteomic-samples","text":"How do Aurora columns perform with phosphoproteomic samples?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Troubleshooting"))
+{
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Here are your reference articles","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/performance","text":"Can the emitter tip be replaced in case of damage without replacing the whole column?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/factors-that-cause-ionisation-issues-with-the-aurora-series-columns","text":"What sort of factors cause ionisation issues with Aurora Series columns?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/how-can-i-clean-up-organic-contaminants-from-aurora-seroescolumns","text":"How can I clean up organic contaminants from my column?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/i-am-e","text":"How can I reduce high column back pressure caused by a collection of particles that has transferred from the sample vial to the start of the column?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/how-can-i-reduc","text":"How can I revive a column that has been blocked by a 'thick' sample?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/is-it-normal-for-my-co","text":"Is it normal for a column to experience a gradual increase in back pressure over its lifetime?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/are-low-amounts-1mm-10mm-of-hepes-in-samples-problematic","text":"Are low amounts (1mM - 10mM) of HEPES in samples problematic?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"},{"url":"https://desk.zoho.com.au/portal/ionopticks/en/kb/articles/a-small-number-of-peptides-from-my-sample-are-not-captured-during-the-loading-step-is-this-normal","text":"A small number of peptides from my sample are not captured during the loading step. Is this normal?","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+}
+else if(msg.equalsIgnoreCase("Can't find what I'm looking for"))
+{
+	response = Map();
+	response.put("action","context");
+	response.put("context_id","browsing");
+	question = {"name":"browsing","replies":{{"type":"links","text":"Please click link below to submit a ticket","image":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true","links":{{"url":"https://desk.zoho.com.au/portal/ionopticks/en/newticket","text":"Submit a ticket","icon":"https://workdrive.zohopublic.com.au/external/2Vp73bLRPB-7DKEWB/download?directDownload=true"}}}},"suggestions":{"Want to navigate to another category?","Thanks"}};
+	response.put("questions",{question});
+	//response.put("action","")
+	//response.put("replies",{"Hello there!Looking for anything specific?"});
+	// 	name = {"name":"detail","replies":{{"text":"Hi, Please enter your name to submit a ticket!","field_name":"siq_name"}},"input":{"type":"name","placeholder":"Enter your name","value":"","error":{"Enter a valid name"}}};
+	// 	email = {"name":"detail","replies":{{"text":"Hi, Please enter your email to submit a ticket!","field_name":"siq_email"}},"input":{"type":"name","placeholder":"Enter your email","value":"","error":{"Enter a valid email"}}};
+	// 	response.put("questions",{name,email});
+	// 	response.put("action","reply");
+}
+// {
+else
+{
+	response.put("action","reply");
+	response.put("replies",{{"text":"Hello there! Need some help? Start by selecting a category below to read through helpful support articles in our Help Centre"}});
+	response.put("suggestions",{"IonOpticks Products","FAQ","Quotes, Orders, and Payment","Shipping and Customs","Instrument Compatibility","Storage, Installation, and Operation","Recommendations","Example Data","Performance Examples","Troubleshooting","Can't find what I'm looking for"});
+}
+return response;
